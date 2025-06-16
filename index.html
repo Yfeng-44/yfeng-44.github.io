@@ -1,538 +1,208 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!-- <meta name=viewport content="width=800"> -->
-    <meta name=viewport content="width=device-width">
-    <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-    <style type="text/css">
-        /* Color scheme stolen from Sergey Karayev */
-
-        a {
-            color: #1772d0;
-            /* color: #07889b; */
-            text-decoration: none;/
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuan Feng | Personal Website</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Tailwind's gray-50 */
         }
-
-        a:focus,
-        a:hover {
-            color: #e37222;
-            /* #f09228; */
-            text-decoration: none;
+        .heading {
+            color: #1e3a8a; /* Tailwind's blue-800 */
         }
-
-        body,
-        td,
-        th,
-        tr,
-        p,
-        a {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 16px
+        .highlight {
+            color: #dd6b20; /* A pleasant orange for emphasis */
+            font-weight: 500;
         }
-
-        strong {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 16px;
+        .link {
+            color: #2563eb; /* Tailwind's blue-600 */
+            transition: color 0.2s ease-in-out;
         }
-
-        heading {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 22px;
-            color: #e37222;
+        .link:hover {
+            color: #1d4ed8; /* Tailwind's blue-700 */
+            text-decoration: underline;
         }
-
-        papertitle {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 16px;
-            font-weight: bold;
+        .paper-title {
+            font-weight: 600;
+            color: #1f2937; /* Tailwind's gray-800 */
         }
-
-        name {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 32px;
-        }
-
-        .footer {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 14px;
-            opacity: 0.75;
-            color: #777;
-        }
-
-        .one {
-            width: 160px;
-            height: 160px;
-            position: relative;
-        }
-
-        .two {
-            width: 160px;
-            height: 160px;
-            position: absolute;
-            transition: opacity .2s ease-in-out;
-            -moz-transition: opacity .2s ease-in-out;
-            -webkit-transition: opacity .2s ease-in-out;
-        }
-
-        .fade {
-            transition: opacity .2s ease-in-out;
-            -moz-transition: opacity .2s ease-in-out;
-            -webkit-transition: opacity .2s ease-in-out;
-        }
-
-        span.highlight {
-            background-color: #ffffd0;
-        }
-
-        span.artifact {
-            color: #6cb41b;
-            padding: 1px;
-        }
-
-        span.underline {
-            border-bottom: 1px solid black;
-            padding-bottom: 1px;
-        }
-
-        span.tldr {
-            color: #555555;
-        }
-
-        em.highlight {
-            color: #e37222;
+        .my-name-underline {
+             text-decoration: underline;
+             text-decoration-color: #93c5fd; /* Tailwind's blue-300 */
+             text-decoration-thickness: 2px;
         }
     </style>
-    <link rel="icon" type="image/png" href="assets/yuan-headshot-new.jpg">
-    <title>Yuan Feng</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet'
-        type='text/css'>
 </head>
+<body class="text-gray-700 antialiased">
 
-<body>
-    <table width="960" border="0" align="center" cellspacing="0" cellpadding="0">
-        <tr>
-            <td>
-                <!-- Intro Begin -->
-                <table width="100%" align="left" border="0" cellspacing="0" cellpadding="12"
-                    style="table-layout:fixed;">
-                    <colgroup>
-                        <col span="1" style="width: 23%;">
-                        <col span="1" style="width: 84%;">
-                    </colgroup>
-                    <tr>
-                        <td valign="middle">
-                            <img src="assets/yuan-headshot-new.jpg" height="170px">
-                        </td>
-                        <td valign="middle">
-                            <p align="left">
-                                <name>Yuan Feng &nbsp; </name>
-                            </p>
-                            <p>I'm a 4-year Ph.D student in University of California, Merced, where I am so fortunately working with <a href="https://www.mocalab.org/">Prof. Hyeran Jeon</a>. 
-                                Prior to that, I received my M.Sc from University of Edinburgh, and my B.E. from Xiamen University (those are all pretty beautifull cities, be sure to visit them!!).
-                            <!--<p>My research interests mainly focus on <em class="highlight">heterogeneous computing</em> and <em class="highlight">memory/storage systems</em>. </p> I design fast and reliable systems for datacenters. During my doctoral research, I focused on designing system support for persistent memory-based big memory platforms. </p>-->
-                            <!-- <p>I am a Ph.D. candidate of Electrical Engineering and Computer Science at University of California Merced, where I am a member of <a href="http://pasalabs.org"> Parallel Architecture, System, and Algorithm Lab (PASA)</a> and advised by <a href="http://faculty.ucmerced.edu/dong-li">Dr. Dong Li</a>. Before coming to UC Merced, I earned my master degree in Computer Science and Engineering from Michigan State University.</p>-->
-                            <!--<p>  I focus on <em class="highlight">machine learning security, measurement, and explainable AI. </em> <br>-->
-                            <p>My research areas are Computer Architecture (more specifically, <em class="highlight">GPGPU Architecture</em>, <em class="highlight">Memory systems</em> and their interaction with <em class="highlight">ML</em>). I design high performance, robust, and engergy-efficient Hardware Architecture and Systems. My recent work focuses on designing architecture support for <a class="highlight">Efficient Multi-GPU collective primitives</a> </p>
+    <!-- Main Container -->
+    <div class="container mx-auto max-w-4xl p-4 sm:p-6 lg:p-8">
 
-                            <p align=left>Contact: yfeng44 [at] ucmerced [dot] edu</p>
-                            <!--<p align=left>Office: Room 4111, Thomas M. Siebel Center, Urbana, IL 61801 </p>-->
-                            <!-- <p><font size="3" color="#E9623F"><strong>I am completing my Ph.D. by May 2021, and I am actively looking for a full-time position in system research.</strong></font></p>
-              <p align=left>-->
-                            <!-- <a href="data/Resume_LiminYang.pdf">Resume</a> &nbsp;/&nbsp; -->
-                             <a href="https://www.linkedin.com/in/yuan-feng-4b91a51b8/"> Résumé </a>
-                            &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-                            <a href="https://www.linkedin.com/in/yuan-feng-4b91a51b8/"> LinkedIn </a>
-                            <!-- &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp; -->
-                            <!-- <a href="https://scholar.google.com/citations?user=p_mY8S0AAAAJ&hl=en">Google Scholar</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp; -->
-                            <!-- <a href="https://twitter.com/KaikyleNg">Twitter</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp; -->
-                            <!-- <a href="https://github.com/kaiwu1121"> GitHub </a>  -->
-                            </p>
-                        </td>
-                    </tr>
-                </table>
-                <!-- Intro End -->
+        <!-- Header/Intro Section -->
+        <header class="flex flex-col sm:flex-row items-center space-y-6 sm:space-y-0 sm:space-x-8 mb-12">
+            <!-- Profile Picture -->
+            <div class="flex-shrink-0">
+                <img src="https://placehold.co/170x170/e2e8f0/334155?text=YF" 
+                     alt="Yuan Feng" 
+                     class="w-40 h-40 rounded-full object-cover shadow-lg"
+                     onerror="this.onerror=null;this.src='https://placehold.co/170x170/e2e8f0/334155?text=YF';">
+            </div>
+            
+            <!-- Bio and Links -->
+            <div>
+                <h1 class="text-4xl font-bold text-gray-900 mb-1">Yuan Feng</h1>
+                <p class="mb-4">
+                    I'm a 4th-year Ph.D. student at the University of California, Merced, fortunate to work with <a href="https://www.mocalab.org/" class="link" target="_blank">Prof. Hyeran Jeon</a>. Prior to that, I received my M.Sc from the University of Edinburgh, and my B.E. from Xiamen University.
+                </p>
+                <p class="mb-4">
+                    My research areas are Computer Architecture (more specifically, <span class="highlight">GPGPU Architecture</span>, <span class="highlight">Memory systems</span> and their interaction with <span class="highlight">ML</span>). I design high performance, robust, and energy-efficient Hardware Architecture and Systems. My recent work focuses on designing architecture support for <a href="#" class="highlight link">Efficient Multi-GPU collective primitives</a>.
+                </p>
+                <div class="flex items-center space-x-4">
+                    <a href="mailto:yfeng44@ucmerced.edu" class="link font-semibold">yfeng44 [at] ucmerced [dot] edu</a>
+                    <span class="text-gray-300">|</span>
+                    <a href="https://www.linkedin.com/in/yuan-feng-4b91a51b8/" class="link font-semibold" target="_blank">Résumé</a>
+                    <span class="text-gray-300">|</span>
+                    <a href="https://www.linkedin.com/in/yuan-feng-4b91a51b8/" class="link font-semibold" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </header>
 
-                <!-- News Begin -->
-                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
-                    <tr>
-                        <td>
-                            <heading>News</heading>
-                        </td>
+        <!-- Main Content -->
+        <main>
+            <!-- News Section -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold heading border-b-2 border-blue-200 pb-2 mb-6">News</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start space-x-4">
+                        <span class="font-semibold text-gray-600 w-24 flex-shrink-0">Mar 2025</span>
+                        <p>Two papers got accepted by <span class="highlight">ISCA'2025</span>! See you in Tokyo!</p>
+                    </li>
+                    <li class="flex items-start space-x-4">
+                        <span class="font-semibold text-gray-600 w-24 flex-shrink-0">Mar 2024</span>
+                        <p>One paper got accepted by <span class="highlight">SC'2024</span>!</p>
+                    </li>
+                     <li class="flex items-start space-x-4">
+                        <span class="font-semibold text-gray-600 w-24 flex-shrink-0">Mar 2024</span>
+                        <p>One paper got accepted by <span class="highlight">ISCA'2024</span>!</p>
+                    </li>
+                    <li class="flex items-start space-x-4">
+                        <span class="font-semibold text-gray-600 w-24 flex-shrink-0">Jun 2023</span>
+                        <p>Presented our collaboration work <span class="paper-title">AttnMemo</span> at <span class="highlight">Western Digital Research</span>.</p>
+                    </li>
+                </ul>
+            </section>
+            
+            <!-- Publications Section -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold heading border-b-2 border-blue-200 pb-2 mb-6">Publications & Presentations</h2>
+                <div class="space-y-6">
+                    <!-- Publication Item -->
+                    <div class="flex flex-col md:flex-row md:space-x-4">
+                        <div class="font-semibold text-gray-600 w-28 flex-shrink-0 mb-1 md:mb-0">[ISCA'25]</div>
+                        <div>
+                            <p class="paper-title">Heliostat: Harnessing Ray Tracing Accelerators for Page Table Walks</p>
+                            <p class="text-sm text-gray-600"><span class="my-name-underline">Yuan Feng</span>, Yuke Li, Jiwon Lee, Won Woo Ro and Hyeran Jeon</p>
+                        </div>
+                    </div>
+                     <!-- Publication Item -->
+                    <div class="flex flex-col md:flex-row md:space-x-4">
+                        <div class="font-semibold text-gray-600 w-28 flex-shrink-0 mb-1 md:mb-0">[ISCA'25]</div>
+                        <div>
+                            <p class="paper-title">Forest: Access-aware GPU UVM Management</p>
+                            <p class="text-sm text-gray-600">Mao Lin, <span class="my-name-underline">Yuan Feng</span>, Guilherme Cox and Hyeran Jeon</p>
+                        </div>
+                    </div>
+                     <!-- Publication Item -->
+                    <div class="flex flex-col md:flex-row md:space-x-4">
+                        <div class="font-semibold text-gray-600 w-28 flex-shrink-0 mb-1 md:mb-0">[SC'24]</div>
+                        <div>
+                            <p class="paper-title">Efficient Tensor Offloading for Large Deep-Learning Model Training based on Compute Express Link</p>
+                            <p class="text-sm text-gray-600">Dong Xu, <span class="my-name-underline">Yuan Feng</span>, Kwangsik Shin, Daewoo Kim, Hyeran Jeon and Dong Li</p>
+                        </div>
+                    </div>
+                    <!-- Publication Item -->
+                    <div class="flex flex-col md:flex-row md:space-x-4">
+                        <div class="font-semibold text-gray-600 w-28 flex-shrink-0 mb-1 md:mb-0">[ISCA'24]</div>
+                        <div>
+                            <p class="paper-title">Barre Chord: Efficient Virtual Memory Translation for Multi-Chip-Module GPUs</p>
+                            <p class="text-sm text-gray-600"><span class="my-name-underline">Yuan Feng</span>, Seonjin Na, Hyesoon Kim, and Hyeran Jeon</p>
+                        </div>
+                    </div>
+                     <!-- Publication Item -->
+                    <div class="flex flex-col md:flex-row md:space-x-4">
+                        <div class="font-semibold text-gray-600 w-28 flex-shrink-0 mb-1 md:mb-0">[IISWC'23]</div>
+                        <div>
+                            <p class="paper-title">Regular-Decepticon: Understanding Vulnerabilities of Transformers</p>
+                            <p class="text-sm text-gray-600">Mujahid Al Rafi, <span class="my-name-underline">Yuan Feng</span>, Fan Yao, Meng Tang, Hyeran Jeon</p>
+                        </div>
+                    </div>
+                     <!-- Publication Item -->
+                    <div class="flex flex-col md:flex-row md:space-x-4">
+                        <div class="font-semibold text-gray-600 w-28 flex-shrink-0 mb-1 md:mb-0">[arxiv Preprint]</div>
+                        <div>
+                            <p class="paper-title">MEMO: Accelerating Transformers with Memoization on Big Memory Systems</p>
+                            <p class="text-sm text-gray-600"><span class="my-name-underline">Yuan Feng</span>, Hyeran Jeon, Filip Blagojevic, Cyril Guyot, Qing Li, and Dong Li</p>
+                        </div>
+                    </div>
+                    <!-- Add other publications following this structure -->
+                </div>
+            </section>
+            
+            <!-- Experience Section -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold heading border-b-2 border-blue-200 pb-2 mb-6">Experience</h2>
+                <div class="space-y-4">
+                    <p><span class="font-semibold w-28 inline-block">Summer 2025</span> Intern GPU Architect, ARM Ltd (Manager: Philip Garcia)</p>
+                    <p><span class="font-semibold w-28 inline-block">Summer 2024</span> Research Intern, Futurewei (Mentor: Sang Wook Do)</p>
+                    <p><span class="font-semibold w-28 inline-block">Summer 2023</span> Research Intern, Alibaba Cloud (Mentor: Jian Chen and Qixiao Liu)</p>
+                </div>
+            </section>
 
-                        <tr>
-                            <td valign="left">
-                                <papertitle>March 2025</papertitle>
-                            </td>
-                            <td valign="left">
-                                Two paper got accepted by <a class="highlight">ISCA'2025</a> ! Stay tuned! See you at Tokyo!
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td valign="left">
-                                <papertitle>March 2024</papertitle>
-                            </td>
-                            <td valign="left">
-                                One paper got accepted by <a class="highlight">SC'2024</a> ! 
-                            </td>
-                        </tr>
+             <!-- Professional Activities Section -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold heading border-b-2 border-blue-200 pb-2 mb-6">Professional Activities</h2>
+                 <div class="space-y-4">
+                    <p><span class="font-semibold w-32 inline-block">GPGPU'23,'24,'25</span> Web Chair, Reviewer</p>
+                    <p><span class="font-semibold w-32 inline-block">PPOPP'25</span> AE Committee</p>
+                    <p><span class="font-semibold w-32 inline-block">OSDI/ATC'25</span> AE Committee</p>
+                </div>
+            </section>
 
-                        <tr>
-                            <td valign="left">
-                                <papertitle>March 2024</papertitle>
-                            </td>
-                            <td valign="left">
-                                One paper got accepted by <a class="highlight">ISCA'2024</a> ! Stay tuned!
-                            </td>
-                        </tr>
+             <!-- Awards Section -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold heading border-b-2 border-blue-200 pb-2 mb-6">Awards</h2>
+                 <div class="space-y-4">
+                    <p><span class="font-semibold w-64 inline-block">Conference Travel Grant</span> MICRO' 22, ISCA' 24, ISCA' 25</p>
+                    <p><span class="font-semibold w-64 inline-block">UC Merced Bobcat Graduate Research Fellowship</span> 2022, 2023</p>
+                </div>
+            </section>
+        </main>
 
+        <!-- Footer -->
+        <footer class="text-center text-sm text-gray-500 mt-12 pt-6 border-t">
+            <p>
+                <!-- Clustrmaps can be added back here if desired -->
+                <!-- <a href="https://clustrmaps.com/site/1br7u" title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=ZExToTpuaXFqt2efZzRPdVCgDJMChHOuze0CqPqlx6I&cl=ffffff" /></a> -->
+            </p>
+            <p>
+                design with the help of google gemini.
+            </p>
+            <p>&copy; 2024 Yuan Feng. All Rights Reserved.</p>
+        </footer>
 
-                        <tr>
-                            <td valign="left">
-                                <papertitle>June 2023</papertitle>
-                            </td>
-                            <td valign="left">
-                                Present our collaboration work <papertitle>AttnMemo</papertitle> at <a class="highlight">Western Digital Research</class>.
-                            </td>
-                        </tr>
+    </div>
 
-                    </tr>
-                </table>
-
-                <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
-                    <colgroup>
-                        <col span="1" style="width: 23%;">
-                        <col span="1" style="width: 77%;">
-                    </colgroup>
-                    <tr>
-                    </tr>
-
-
-                    <!-- Publications Begin -->
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
-                        <tr>
-                            <td>
-                                <heading>Publications and Presentations</heading>
-                            </td>
-                        </tr>
-                    </table>
-                    <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
-                        <colgroup>
-                            <col span="1" style="width: 23%;">
-                            <col span="1" style="width: 77%;">
-                        </colgroup>
-
-                        <tr>
-                            <td valign="center">
-                                <papertitle>[ISCA'25]</papertitle>
-                            </td>
-                            <td valign="center">
-                                <papertitle>Heliostat: Harnessing Ray Tracing Accelerators for Page Table Walks</papertitle>
-                                <br>
-                                <span class="underline">Yuan Feng</span>, Yuke Li, Jiwon Lee, Won Woo Ro and Hyeran Jeon
-                            </td>
-                        </tr>
-
-                         <tr>
-                            <td valign="center">
-                                <papertitle>[ISCA'25]</papertitle>
-                            </td>
-                            <td valign="center">
-                                <papertitle>Forest: Access-aware GPU UVM Management</papertitle>
-                                <br>
-                                Mao Lin, <span class="underline">Yuan Feng</span>, Guilherme Cox and Hyeran Jeon
-                            </td>
-                        </tr>
-
-                    
-                        
-                        <tr>
-                            <td valign="center">
-                                <papertitle>[SC'24]</papertitle>
-                            </td>
-                            <td valign="center">
-                                <papertitle>Efficient Tensor Offloading for Large Deep-Learning Model Training based on Compute Express Link </papertitle>
-                                <br>
-                                Dong Xu, <span class="underline">Yuan Feng</span>, Kwangsik Shin, Daewoo Kim, Hyeran Jeon and Dong Li
-                            </td>
-                        </tr>
-
-                        
-                        <tr>
-                            <td valign="center">
-                                <papertitle>[ISCA'24]</papertitle>
-                            </td>
-                            <td valign="center">
-                                <papertitle>Barre Chord: Efficient Virtual Memory Translation for Multi-Chip-Module GPUs</papertitle>
-                                <br>
-                                <span class="underline">Yuan Feng</span>, Seonjin Na, Hyesoon Kim, and Hyeran Jeon
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td valign="center">
-                                <papertitle>[IISWC'23]</papertitle>
-                            </td>
-                            <td valign="center">
-                                <papertitle>Regular-Decepticon: Understanding Vulnerabilities of
-  Transformers</papertitle>
-                                <br>
-                                Mujahid Al Rafi, <span class="underline">Yuan Feng</span>,  Fan Yao, Meng Tang, Hyeran Jeon
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td valign="center">
-                                <papertitle>[arxiv Preprint]</papertitle>
-                            </td>
-                            <td valign="center">
-                                <papertitle>MEMO : Accelerating Transformers with Memoization on Big Memory Systems</papertitle>
-                                <br>
-                                <span class="underline">Yuan Feng</span>,  Hyeran Jeon, Filip Blagojevic, Cyril Guyot, Qing Li, and Dong Li
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td valign="center">
-                                <papertitle>[GPGPU'23]</papertitle>
-                            </td>
-                            <td valign="center">
-                                <papertitle>Understanding Scalability of Multi-GPU Systems</papertitle>
-                                <br>
-                                <span class="underline">Yuan Feng</span> , Hyeran Jeon
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td valign="center">
-                                <papertitle>[MICRO'22 SRC]</papertitle>
-                            </td>
-                            <td valign="center">
-                                <papertitle>Accelerate Transformers with Efficient Memoization</papertitle>
-                                <br>
-                                <span class="underline">Yuan Feng</span> , Hyeran Jeon, Dong Li
-                            </td>
-                        </tr>
-
-
-                         <tr>
-                            <td valign="center">
-                                <papertitle>[NOPE'22, ASPLOS Workshop]</papertitle>
-                            </td>
-                            <td valign="center">
-                                <papertitle>Too Noisy To Extract: Pitfalls of Model Extraction Attacks</papertitle>
-                                <br>
-                                Mujahid Al Rafi, <span class="underline">Yuan Feng</span> , Hyeran Jeon
-               
-                            </td>
-                        </tr>
-
-
-                    </table>
-                    <!-- Publications End -->
-
-                    <!-- Preprints Begin -->
-                    <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
-          <tr>
-            <td>
-              <heading>Preprints</heading>
-            </td>
-          </tr>
-        </table> -->
-
-                    <!-- Preprints End -->
-
-                    <!-- Internship Begin -->
-                    <!--  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
-          <tr>
-            <td>
-              <heading>Research Experience</heading>
-            </td>
-          </tr>
-        </table>
-        <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
-          <colgroup>
-                <col span="1" style="width: 23%;">
-                <col span="1" style="width: 77%;">
-          </colgroup>
-          <tr>
-            <td valign="center">
-              <span>Bytedance (Infrastructure System Lab)</span>
-            </td>
-            <td valign="center">
-                <em>Research Intern</em>, CA, US, 05/2020 - 11/2020
-            </td>
-          </tr>
-          <tr>
-            <td valign="center">
-                <span>Lawrence Livermore National Laboratory</span>
-            </td>
-            <td valign="center">
-              <em>Research Intern</em>, CA, US, 05/2018 - 08/2018
-            </td>
-          </tr>
-          <tr>
-            <td valign="center">
-                <span>Los Alamos National Laboratory</span></a>
-            </td>
-            <td valign="center">
-              <em>Research Intern</em>, NM, US, 05/2017 - 08/2017
-            </td>
-          </tr>
-          <tr>
-          <td valign="center">
-                <span>UC Merced</span></a>
-            </td>
-            <td valign="center">
-              <em>Graduate Student Researcher</em>, CA, US, 06/2016 - Present
-            </td>
-          </tr>
-        </table>-->
-                    <!-- Internship End -->
-
-                        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
-                        <tr>
-                            <td>
-                                <heading>Experience</heading>
-                            </td>
-                        </tr>
-                    </table>
-                    <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
-                        <colgroup>
-                            <col span="1" style="width: 23%;">
-                            <col span="1" style="width: 77%;">
-                        </colgroup>
-
-                        <tr>
-                            <td valign="center">
-                                <span> Summer, 2025 </span>
-                            </td>
-                            <td valign="center">
-                               Intern GPU Architect, ARM Ltd (Manager: Philip Garcia)</br>
-                            </td>
-                        </tr>
-
-                        
-                        
-                        <tr>
-                            <td valign="center">
-                                <span> Summer, 2024 </span>
-                            </td>
-                            <td valign="center">
-                               Research Intern, Futurewei (Mentor: Sang Wook Do)</br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="center">
-                                <span>Summer, 2023</span>
-                            </td>
-                            <td valign="center">
-                                Research Intern, Alibaba Cloud (Mentor: Jian Chen and Qixiao Liu)</br>
-                            </td>
-                        </tr>
-                    </table>
-                    <!-- Internship End -->
-                    
-                    
-
-                    
-                    <!-- Service Begin-->
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
-                        <tr>
-                            <td>
-                                <heading>Professional Activities</heading>
-                            </td>
-                        </tr>
-                    </table>
-                    <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
-                        <colgroup>
-                            <col span="1" style="width: 23%;">
-                            <col span="1" style="width: 77%;">
-                        </colgroup>
-                        <tr>
-                            <td valign="center">
-                                GPGPU'23,'24,'25
-                            </td>
-                            <td>
-                                <span> Web Chair, Reviewer</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td valign="center">
-                                PPOPP'25
-                            </td>
-                            <td>
-                                <span>AE Committee</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td valign="center">
-                                OSDI/ATC'25
-                            </td>
-                            <td>
-                                <span>AE Committee</span>
-                            </td>
-                        </tr>
-                    </table>
-                    <!--Service End-->
-
-                    
-                    <!-- Awards Begin -->
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
-                        <tr>
-                            <td>
-                                <heading>Awards</heading>
-                            </td>
-                        </tr>
-                    </table>
-                    <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
-                        <colgroup>
-                            <col span="1" style="width: 23%;">
-                            <col span="1" style="width: 77%;">
-                        </colgroup>
-                        <tr>
-                            <td valign="center">
-                                Conference Travel Grant
-                            </td>
-                            <td>
-                                <span> MICRO' 22, ISCA' 24, ISCA' 25 </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="center">
-                                UC Merced Bobcat Graduate Research Fellowship
-                            </td>
-                            <td>
-                                <span>2022,2023</span>
-                            </td>
-                        </tr>
-                    </table>
-                    <!-- Awards End -->
-
-                    <br>
-
-                    <table width="100%" align="center" border="0" cellpadding="12">
-                        <tr>
-                            <td width="100%" valign="center">
-                                <p class="footer">
-<a href="https://clustrmaps.com/site/1br7u"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=ZExToTpuaXFqt2efZzRPdVCgDJMChHOuze0CqPqlx6I&cl=ffffff" /></a>
-                                            <br>
-                                <p style="color: #777; font-size: 12px;">credit Kai Wu,  <a
-                                        href="https://jonbarron.info/" target="_blank"
-                                        style="color: #777; font-size: 12px;">Jon Barron</a> & <a
-                                        href="https://liminyang.web.illinois.edu/" target="_blank"
-                                        style="color: #777; font-size: 12px;">Limin Yang</a> <br></p>
-                                </p>
-                            </td>
-                        </tr>
-                    </table>
-            </td>
-        </tr>
-    </table>
 </body>
-
 </html>
